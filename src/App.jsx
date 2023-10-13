@@ -5,8 +5,9 @@ import Home from "./pages/Home";
 import ProductPage from "./pages/ProductPage";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
-
+import Success from "./pages/Success";
 import { BrowserRouter as Router, Route, Routes,Navigate } from "react-router-dom";
+
 const App = () => {
   const user= true;
   return (
@@ -18,8 +19,8 @@ const App = () => {
         <Route exact path="/product/:id" element={<ProductPage />} />
         <Route exact path="/cart" element={<Cart />} />
         <Route exact path="/login" element={user ? <Navigate to="/" /> : <Login />} />
+        <Route exact path="/success" element={<Success />} />
         <Route exact path="/register" element={user ? <Navigate to="/" /> : <Register />} />
-
       </Routes>
     </Router>
   );
