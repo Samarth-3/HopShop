@@ -176,7 +176,7 @@ const Cart = () => {
           tokenId: stripeToken.id,
           amount: cart.total * 100,
         });
-        history("/success", { data: res.data });
+        history("/success", {data: res.data, products: cart });
       } catch (error) {
         console.log(error);
       }
